@@ -242,7 +242,7 @@ header{
     #banner {
         width: 100%; 
         justify-content: center; 
-        margin-top: 20px; /* Ajuste este valor se necessário */
+        margin-top: 20px; 
     }
 
     #banner img {
@@ -530,7 +530,7 @@ button:hover {
 
 .delete-button-container, .edit-button-container {
     white-space: nowrap; /* Impede que os botões quebrem em múltiplas linhas */
-    text-align: center; /* Alinha o botão no centro ou ajuste conforme a necessidade */
+    text-align: center; 
 }
 
 .delete-button, .edit-button {
@@ -863,7 +863,7 @@ p{
 
 .gráfico {
     margin: 20px auto; /* Espaço entre os gráficos e centraliza o gráfico */
-    width: 80%; /* Ajuste essa largura conforme necessário */
+    width: 80%; 
     max-width: 700px; /* Limite a largura máxima dos gráficos */
     text-align: center; /* Alinha o conteúdo do gráfico ao centro */
 }

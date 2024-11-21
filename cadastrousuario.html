@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul id="nav_list">
+                <li class="nav-item"><a href="./index.html">Home</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main id="cadastro-container">
+        <section id="cad-form">
+            <h2>Cadastro de Usuário</h2>
+            <form action="#" method="post">
+
+                <label for="fullname" class="nome">Nome Completo:</label>
+                <input type="text" id="fullname" name="fullname" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(\s[A-Za-zÀ-ÖØ-öø-ÿ]+)+$" placeholder="Nome e sobrenome" required><br>
+
+                <label for="email" class="nome">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder=" teste@teste.com.br"><br>
+
+                <label for="phone" class="nome">Telefone para Contato:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder=" (41) 99999-9999" required><br>
+
+                <label for="username" class="nome">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" pattern="^[a-z0-9]+$" title="O nome de usuário deve conter apenas letras minúsculas e números, sem espaços." required><br>
+                
+
+                <label for="password" class="">Senha:</label>
+                <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" required><br>
+
+                <ul id="cadlist">
+                    <li>8 caracteres</li>
+                    <li>1 letra maiúscula</li>
+                    <li>1 letra minúscula</li>
+                    <li>1 caractere especial</li>
+                </ul>
+
+                <button type="submit" class="btn-default">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Clube de Livros Online</p>
+    </footer>
+</body>
+</html>

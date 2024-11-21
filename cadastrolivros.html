@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Cadastro de Livros</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul id="nav_list">
+                <li class="nav-item"><a href="./index.html">Sair</a></li>
+                <li class="nav-item"><a href="./cadastrolivros.html">Cadastro de Livros</a></li>
+                <li class="nav-item"><a href="./relatorios.html">Relatórios</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <section id="back1">
+        <h1 id="cadastro-livro">Cadastro de Livros</h1>
+        <form id="bookForm" class="form-container">
+            <input type="text" id="title" placeholder="Título" required>
+            <input type="text" id="author" placeholder="Autor" required>
+            <input type="text" id="genre" placeholder="Gênero" required>
+            <button type="submit">Cadastrar Livro</button>
+        </form>    
+    </section>
+
+    <section id="back">
+        <h2 id="lista">Lista de Livros</h2>
+        <div class="table-container">
+            <table id="bookTable">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Gênero</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="bookList"></tbody>
+            </table>
+        </div>    
+    </section>
+    
+      <!-- Seção de Empréstimos de Livros -->
+      <section id="back1">
+        <h1 id="cadastro-emprestimo">Cadastro de Empréstimos</h1>
+        <form id="loanForm" class="form-container">
+            <input type="text" id="memberName" placeholder="Nome do Membro" required>
+            <input type="text" id="bookTitle" placeholder="Título" required>
+            <input type="date" id="returnDate" placeholder="Data de Devolução" required>
+            <button class="action-btn">Cadastrar Empréstimo</button>
+        </form>
+    </section>
+
+    <section id="back">
+        <h2 id="lista">Lista de Empréstimos</h2>
+        <div class="table-container">
+            <table id="loanTable">
+                <thead>
+                    <tr>
+                        <th>Nome do Membro</th>
+                        <th>Título</th>
+                        <th>Devolução</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="loanList"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Clube de Livros Online</p>
+    </footer>
+
+    <script src="./javascript/livros.js"></script>
+    <script src="./javascript/emprestimos.js"></script>
+</body>
+</html>

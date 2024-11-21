@@ -1,0 +1,884 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ebe6c5;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    padding: 5px 5%;
+}
+
+/* Estilos de botão */
+.btn-default {
+    margin: 5px;
+    padding: 10px 14px;
+    background-color: rgb(46, 46, 191);
+    border-radius: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+}
+
+.btn-default:hover {
+    background-color: rgb(11, 11, 167);
+    box-shadow: 0px 4px 15px rgba(25, 121, 255, 0.2);
+}
+
+header{
+    width: 100%;
+    padding: 28px 8%;
+}
+
+#navbar{
+    display: grid;
+    gap: 10px; /* Espaço entre os itens */
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav_list{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #1d1d1d;
+    font-weight: 600;
+    text-align: end;
+}
+
+.nav-log a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0a3a82;
+    font-weight: 600;
+    text-align: end;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.nav-log a:hover{
+    background-color: #0b0ba7;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 711px) { 
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #nav_list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-item a{
+        text-align: center;
+        font-size: 16rem;
+    }
+}
+
+.nav-item a:hover{
+    color: #0b0ba7;
+    transition: 0.5s;
+}
+
+.nav-item a{
+    color: #1d1d1d;
+}
+
+.nav-item a::after{
+    content: "";
+    background-color: #0a3a82;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.nav-item a:hover::after{
+    width: 100%;
+}
+
+
+#home{
+    display: flex;
+    min-height: calc(100vh - 91px);
+}
+
+#cta {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 6%;
+}
+
+#cta .tittle{
+    font-size: 4rem;
+    color: #1d1d1d;
+}
+
+#cta .tittle span{
+    color: #0b0ba7;
+}
+
+#cta .description{
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 5px;
+    line-height: 1.5;
+    justify-content: center;
+    text-align: left;
+}
+
+#cta_buttons{
+    display: flex;
+    gap: 24px;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#cta_buttons a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#phone_button{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color:#ffffff;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#phone_button button{
+    box-shadow: none;
+}
+
+#banner{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 70%;
+}
+
+#banner img{
+    width: 600px;
+    height: auto;
+    max-width: 600px;
+}
+
+@media screen and (width: 972px){
+    #banner img{
+        display: block;
+        margin-top: 20px;
+    }
+    .description{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 972px) {
+    #home{
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #cta{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    #cta {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .description {
+        width: 100%; /* Certifique-se de que a descrição ocupa 100% do espaço */
+        text-align: center; /* Alinha o texto ao centro, se necessário */
+        margin: 20px 0; /* Adiciona espaço acima e abaixo da descrição */
+    }
+
+    #banner {
+        width: 100%; 
+        justify-content: center; 
+        margin-top: 20px; /* Ajuste este valor se necessário */
+    }
+
+    #banner img {
+        width: 90%; 
+        max-width: 400px; 
+        margin: 0 auto;
+        display: block; /* Garante que a imagem seja um bloco */
+    }
+}
+
+section#best-books {
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+    gap: 10px; /* Espaço entre os itens */
+    padding: 20px;
+}
+
+.book {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; 
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-between;
+}
+
+@media screen and (width: 711px){
+    .book{
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+.semana{
+    font-size: 50px;
+    color: #1d1d1d;
+    padding: 10px;
+}
+.book h3 {
+    font-size: 1.5rem;
+    color: #1d1d1d;
+}
+
+.book p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos responsivos para telas menores */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Alinha os containers verticalmente em telas pequenas */
+        margin: 5px;
+    }
+
+    .book {
+        width: 100%; /* Cada container ocupará 100% da largura */
+    }
+}
+
+.book .azul{
+    color: #1d1d1d;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+.book p.small{
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    color: #0a3a82;
+    text-align: center;
+}
+
+.cntt{
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    color: #1d1d1d;
+    
+}
+
+.rating {
+    display: flex;
+    justify-content: center; /* Centraliza as estrelas */
+    margin-top: 10px; /* Espaço entre a descrição e a avaliação */
+}
+
+.star-filled {
+    color: #FFD700; /* Cor das estrelas preenchidas */
+}
+
+#cadastro-livro{
+    color: #1d1d1d;
+    padding: 5px;
+    text-align: center;
+}
+
+#cadastro-emprestimo{
+    color: #1d1d1d;
+    padding: 5px;
+    text-align: center;
+}
+.form-container {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 400px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+input[type="text"] {
+    width: 100%; /* Largura completa */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Espaçamento entre os campos */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s; /* Transição suave na borda */
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.form-container {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+button {
+    margin-top: 10px; /* Adiciona um espaçamento acima do botão */
+    background-color: #0a3a82;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    max-width: 200px; /* Define uma largura máxima para o botão */
+}
+.action-btn {
+    margin-top: 10px; /* Adiciona um espaçamento acima do botão */
+    background-color: #0a3a82;
+    color: #ffffff;
+    border: none;
+    padding: 0px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    max-width: 200px; /* Define uma largura máxima para o botão */
+}
+
+button:hover {
+    background-color: #0b0ba7;
+}
+
+#lista{
+    color: #1d1d1d;
+    padding: 5px;
+    text-align: center;
+}
+
+.table-container {
+    display: flex; /* Usamos flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    margin: 10px auto; /* Aumenta a margem superior e inferior e centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno do container */
+    border: 1px solid #ccc; /* Borda do container */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito de profundidade */
+    background-color: #f9f9f9; /* Cor de fundo do container */
+    max-width: 800px; /* Define a largura máxima do container */
+    width: 100%; /* O container ocupa 100% da largura disponível até o máximo */
+    max-width: 70%;
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+}
+
+#loanTable {
+    width: 100%; /* Tabela ocupa a largura total do container */
+    border-collapse: separate; /* Remove espaços entre bordas */
+    border: none;
+}
+
+#loanTable th{
+    background-color: #0b0ba7;
+    color: #ffffff;
+    border-radius: 9px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+#loanTable th, #loanTable td {
+    padding: 10px;
+    text-align: center;
+    border: none; /* Remove as bordas das células */
+    word-wrap: break-word; /* Quebra as palavras longas */
+    word-break: break-all; /* Faz a quebra de palavras longas */
+    white-space: normal; /* Permite que o conteúdo quebre em várias linhas */
+}
+
+#bookTable {
+    width: 100%; /* Tabela ocupa a largura total do container */
+    border-collapse: separate; /* Remove espaços entre bordas */
+    border: none;
+}
+
+#bookTable th{
+    background-color: #0b0ba7;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#bookTable th, #bookTable td {
+    padding: 10px;
+    text-align: center;
+    border: none; /* Remove as bordas das células */
+    word-wrap: break-word; /* Quebra as palavras longas */
+    word-break: break-all; /* Faz a quebra de palavras longas */
+    white-space: normal; /* Permite que o conteúdo quebre em várias linhas */
+}
+
+#back1 {
+    max-width: 100%; /* Limita a largura da section */
+    width: 100%; /* Garante que a largura seja responsiva */
+    margin: 0 auto; /* Centraliza a section */
+    padding: 20px; /* Ajusta o espaço interno */
+}
+
+#bookList{
+    text-align: center;
+}
+
+.delete-button {
+    background-color: #0a3a82;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button-container {
+    text-align: center; /* Alinha o botão à direita da célula */
+}
+
+.delete-button:hover, .edit-button:hover {
+    background-color: #0b0ba7;
+}
+
+.edit-button {
+    background-color: #0a3a82; /* Cor de fundo do botão Editar */
+    color: white;
+    border: none; /* Remove bordas */
+}
+
+.delete-button-container, .edit-button-container {
+    white-space: nowrap; /* Impede que os botões quebrem em múltiplas linhas */
+    text-align: center; /* Alinha o botão no centro ou ajuste conforme a necessidade */
+}
+
+.delete-button, .edit-button {
+    display: inline-block; /* Garante que o botão seja exibido como bloco em linha */
+    padding: 5px 10px; /* Ajusta o espaçamento interno dos botões */
+    white-space: nowrap; /* Impede quebra de linha dentro do botão */
+}
+
+/* Estilos do footer */
+footer {
+    color: #1d1d1d;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Para manter o footer no final da página */
+}
+
+#cad-form input[type="email"],
+#cad-form input[type="tel"],
+#cad-form input[type="text"],
+#cad-form input[type="password"]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.nome{
+    color: #1d1d1d;
+}
+
+#cadlist {
+    margin: 15px;
+    padding: 5px;
+    list-style-type: disc;
+    color: #333;
+    text-align: left;
+    font-size: 16px;
+}
+
+#cadastro-container {
+    display: grid;
+    gap: 10px; /* Espaço entre os itens */
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#cad-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#cad-form h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#cad-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: left;
+}
+
+#cad-form button {
+    background-color: #0a3a82;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+}
+
+#cad-form button:hover {
+    background-color: #0b0ba7;
+}
+
+span{
+    color: #0b0ba7;
+}
+
+#ranking {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    margin: 5px;
+    padding: px;
+}
+
+.ranking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    width: 90%;
+}
+
+@media screen and (width: 711px){
+    .ranking-container{
+        margin: 15px;
+    }
+    
+}
+
+#leitores {
+    width: 100vw;
+    border-collapse: collapse;
+    background-color: #fff;
+    max-width: 1000px;
+}
+
+#leitores th, #leitores td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #1d1d1d;
+    font-size: 1rem;
+    max-width: 900px;
+}
+
+#leitores th {
+    background-color: #c5dafafd;
+    font-weight: bold;
+    max-width: 900px;
+}
+
+#leitores tr:nth-child(even) {
+    background-color: #fff;
+}
+
+#leitores td {
+    color: #1d1d1d;
+}
+
+#leitores tr:last-child td {
+    border-bottom: none;
+}
+
+
+@media screen and (max-width: 926px) {
+    #ranking{
+        min-height: 100%;
+        padding-top: 0px;
+        margin: 5px;
+        padding: 5px;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+    }
+} 
+
+
+#login{
+    width: 40%;
+    min-width: 300px;
+    padding: 30px;
+    padding-top: 0px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+  
+}
+
+form {
+    text-align: center; /* Centraliza o conteúdo do formulário, incluindo os botões */
+}
+
+button {
+    display: inline-block; /* Faz com que os botões fiquem alinhados */
+}
+
+.logg{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.logg a{
+    text-decoration: none;
+    color: #0a3a82;
+}
+
+.logg a:hover{
+    color: #0b0ba7;
+}
+
+button:hover { background-color: #0b0ba7; }
+
+button[type="button"]{ 
+    background-color: #0a3a82; 
+}
+
+button[type="button"]:hover{ 
+    background-color: #0b0ba7; 
+}
+
+button[type="submit"]{
+    background-color: #0a3a82;
+}
+
+button[type="submit"]:hover{
+    background-color: #0b0ba7;
+}
+
+dialog button{ 
+    margin-top: 20px;
+}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    
+}
+
+dialog p.erro{
+    padding: 10px;
+    background-color: rgb(255, 190, 190);
+    color: rgb(86, 2, 2);
+    text-align: center;
+    justify-content: center;
+}
+
+/* Estilo das seções */
+main {
+    padding: 20px;
+}
+
+.relat {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1d1d1d;
+}
+
+.mensal {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0b0ba7;
+}
+
+p{
+    color: #1d1d1d;
+}
+
+.container_relat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    width: 90%;
+}
+
+.table-relat {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.td-relat {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #f2f2f2;
+}
+
+.th-relat {
+    background-color: #0056b3;
+    color: white;
+    margin: 15px;
+    padding: 15px;
+}
+
+.grafico-section {
+    justify-content: center;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border:  1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+.grafic{
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0b0ba7;
+    text-align: center;
+}
+
+.gráfico {
+    margin: 20px auto; /* Espaço entre os gráficos e centraliza o gráfico */
+    width: 80%; /* Ajuste essa largura conforme necessário */
+    max-width: 700px; /* Limite a largura máxima dos gráficos */
+    text-align: center; /* Alinha o conteúdo do gráfico ao centro */
+}
+
+canvas {
+    max-width: 100%; 
+    height: auto;
+}
+
+.mais{
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0b0ba7;
+}
+
+.blck{
+    color: #1d1d1d;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">
+    <title>Clube de Livros Online</title>
+</head>
+<body>
+    <!--Gabriella Barbeiri - 38243067-->
+    <!--Yago Adaime - 37140621-->
+    <!--Henrique Nunes - 38044757-->
+    <!--Renato Trentin - 38855461-->
+    <!--João Rubens - 38744619-->
+    <header>
+        <nav id="navbar">
+            <ul id="nav_list">
+                <li class="nav-log"><a href="#login" id="btnLogin">Login </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="tittle">
+                     O livro vai até 
+                    <span>você</span>
+                </h1>
+
+                <p class="description">Ler livros é viajar por mundos infinitos sem sair do lugar. Cada página vira uma janela para novas ideias, desperta a imaginação e amplia o entendimento da vida. Através das histórias, encontramos empatia, sabedoria e inspiração. Ler é alimentar a mente e a alma, enriquecendo nosso ser em cada parágrafo.</p>
+
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="./imagens/home.png" alt="imagem-de-um-menino-lendo">
+            </div>
+        </section>
+
+        <section id="best-books">
+            <h2 class="semana">Os melhores da semana</h2>
+            <div class="container">
+              <div class="book">
+                <h3 class="azul">Orgulho e Preconceito</h3>
+                <p class="small">JANE AUSTEN</p><br>
+                <p>Um clássico da literatura inglesa, este livro conta a história de Elizabeth Bennet, uma jovem que lida com questões de classe social, moralidade e, claro, amor, enquanto navega em um complexo relacionamento com o Sr. Darcy</p>
+                <div class="rating">
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span> <!-- Estrela vazia -->
+                </div>
+              </div>
+              <div class="book">
+                <h3 class="azul">O Nome do Vento</h3>
+                <p class="small">PATRICK ROTHFUSS</p><br>
+                <p>Esse primeiro volume da trilogia A Crônica do Matador do Rei apresenta Kvothe, um herói lendário que narra sua vida repleta de mistério, magia e tragédia em um mundo de fantasia rico e detalhado</p>
+                <div class="rating">
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span> <!-- Estrela vazia -->
+                </div>
+              </div>
+              <div class="book">
+                <h3 class="azul">Duna</h3>
+                <p class="small">FRANK HEBERT</p><br>
+                <p>Considerada uma obra-prima da ficção científica, Duna se passa em um futuro distante em um planeta desértico chamado Arrakis. A história envolve temas como política, religião, e poder</p>
+                <div class="rating">
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span> <!-- Estrela vazia -->
+                </div>
+              </div>
+            </div>
+          </section>          
+    </main>
+    <dialog id="login"> <!-- Adicione o ID aqui -->
+        <form>
+            <h2>Login</h2>
+            <label for="email">E-mail:</label>
+            <input type="text" name="email" id="email"><br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha"><br>
+            <button type="button" id="btnFechar">Sair</button>
+            <button type="submit">Entrar</button>
+        </form>
+        <p class="logg">Não tem uma conta? <a href="./cadastrousuario.html">Cadastre-se aqui</a></p>
+    </dialog>
+    <h2 id="ranking">Ranking dos leitores mais <span>ativos</span></h2>
+    <section class="ranking-container">
+        <table id="leitores">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Membro</th>
+                    <th>Livros Lidos</th>
+                </tr>
+            </thead>
+            <tbody class="body-table">
+                <tr>
+                    <td>1°</td>
+                    <td>Gabriella Barbieri</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>2°</td>
+                    <td>João Rubens</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>3°</td>
+                    <td>Henrique Nunes</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>4°</td>
+                    <td>Renato Trentin</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>5°</td>
+                    <td>Yago Adaime</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>    
+    
+    <footer>
+        <p>&copy; 2024 Clube de Livros Online</p>
+    </footer>
+
+    <script src="./javascript/login.js"></script>
+    <script src="./javascript/script.js" defer></script>
+</body>
+</html>

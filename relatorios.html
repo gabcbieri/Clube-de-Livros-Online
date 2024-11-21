@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+    
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Relatórios e Gráficos - Clube de Livros Online</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="nav_list">
+            <li class="nav-item"><a href="./index.html">Sair</a></li>
+            <li class="nav-item"><a href="./cadastro.html">Cadastro de Livros</a></li>
+            <li class="nav-item"><a href="./relatorios.html">Relatórios</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h1 class="relat">Relatórios e Gráficos</h1>
+        <div class="container_relat">
+        <section>
+            <h2 class="mensal">Relatórios mensais</h2>
+            <p>Relatório mensal de atividades do clube, incluindo o número de livros lidos, novos membros e discussões realizadas.</p>
+        
+            <table class="table-relat">
+                <thead>
+                    <tr>
+                        <th class="th-relat">Mês</th>
+                        <th class="th-relat">Livros Lidos</th>
+                        <th class="th-relat">Novos Membros</th>
+                        <th class="th-relat">Discussões Realizadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-relat">Janeiro</td>
+                        <td class="td-relat">27</td>
+                        <td class="td-relat">25</td>
+                        <td class="td-relat">8</td>
+                    </tr>
+                    <tr>
+                        <td class="td-relat">Fevereiro</td>
+                        <td class="td-relat">16</td>
+                        <td class="td-relat">18</td>
+                        <td class="td-relat">6</td>
+                    </tr>
+                    <tr>
+                        <td class="td-relat">Março</td>
+                        <td class="td-relat">19</td>
+                        <td class="td-relat">30</td>
+                        <td class="td-relat">9</td>
+                    </tr>
+                    <tr>
+                        <td class="td-relat">Abril</td>
+                        <td class="td-relat">21</td>
+                        <td class="td-relat">28</td>
+                        <td class="td-relat">12</td>
+                    </tr>
+                    <tr>
+                        <td class="td-relat">Maio</td>
+                        <td class="td-relat">18</td>
+                        <td class="td-relat">23</td>
+                        <td class="td-relat">10</td>
+                    </tr>
+                    <tr>
+                        <td class="td-relat">Junho</td>
+                        <td class="td-relat">20</td>
+                        <td class="td-relat">15</td>
+                        <td class="td-relat">7</td>
+                    </tr>                    
+            </table>
+        </div>
+        </section>
+       
+        <section class="grafico-section">
+            <h2 class="grafic">Gráficos de participação</h2>
+            <div class="gráfico">
+                <canvas id="graficoMembros"></canvas>
+            </div>
+            <div class="gráfico">
+                <canvas id="graficoLivrosLidos"></canvas>
+            </div>
+        </section>
+
+        <div class="container_relat">
+            <section class="relatorio-section">
+                <h2 class="mais">Livros mais lidos</h2>
+                <p>Relatórios dos livros mais lidos nos últimos 6 meses.</p>
+                <table cellpadding="8" cellspacing="0" width="100%">
+                    <table class="table-relat">
+                        <thead>
+                            <tr>
+                                <th class="th-relat">Mês</th>
+                                <th class="th-relat">O Livro Vermelho</th>
+                                <th class="th-relat">Dom Quixote</th>
+                                <th class="th-relat">Senhor Dos Anéis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-relat">Janeiro</td>
+                                <td class="td-relat">4</td>
+                                <td class="td-relat">7</td>
+                                <td class="td-relat">6</td>
+                            </tr>
+                            <tr>
+                                <td class="td-relat">Fevereiro</td>
+                                <td class="td-relat">5</td>
+                                <td class="td-relat">3</td>
+                                <td class="td-relat">8</td>
+                            </tr>
+                            <tr>
+                                <td class="td-relat">Março</td>
+                                <td class="td-relat">6</td>
+                                <td class="td-relat">9</td>
+                                <td class="td-relat">4</td>
+                            </tr>
+                            <tr>
+                                <td class="td-relat">Abril</td>
+                                <td class="td-relat">8</td>
+                                <td class="td-relat">6</td>
+                                <td class="td-relat">7</td>
+                            </tr>
+                            <tr>
+                                <td class="td-relat">Maio</td>
+                                <td class="td-relat">3</td>
+                                <td class="td-relat">5</td>
+                                <td class="td-relat">10</td>
+                            </tr>
+                            <tr>
+                                <td class="td-relat">Junho</td>
+                                <td class="td-relat">7</td>
+                                <td class="td-relat">8</td>
+                                <td class="td-relat">5</td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+        </div>
+
+        <section class="grafico-section">
+            <h2 class="grafic">Gráficos dos Livros</h2>
+            <div class="gráfico">
+                <h3 class="blck">Livro 1</h3>
+                <canvas id="graficoLivroA"></canvas>
+            </div>
+            <div class="gráfico">
+                <h3 class="blck">Livro 2</h3>
+                <canvas id="graficoLivroB"></canvas>
+            </div>
+            <div class="gráfico">
+                <h3 class="blck">Livro 3</h3>
+                <canvas id="graficoLivroC"></canvas>
+            </div>
+        </section>
+<div class="container_relat">
+    <section class="relatorio-section">
+        <h2 class="mensal">Relatório de membros</h2>
+        <p>Onde registramos as atividades dos membros para identificar os mais ativos e engajados.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-relat">Nome</th>
+                    <th class="th-relat">Leituras Completas</th>
+                    <th class="th-relat">Discussões Realizadas</th>
+                    <th class="th-relat">Data de Ingresso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td-relat">João</td>
+                    <td class="td-relat">10</td>
+                    <td class="td-relat">6</td>  
+                    <td class="td-relat">6</td>  
+                </tr>
+                <tr>
+                    <td class="td-relat">Beatriz</td>
+                    <td class="td-relat">15</td>
+                    <td class="td-relat">3</td>
+                    <td class="td-relat">3</td>
+                </tr>
+                <tr>
+                    <td class="td-relat">Carlos</td>
+                    <td class="td-relat">8</td>
+                    <td class="td-relat">3</td>
+                    <td class="td-relat">3</td>
+                </tr>
+                <tr>
+                    <td class="td-relat">Ana</td>
+                    <td class="td-relat">12</td>
+                    <td class="td-relat">5</td>
+                    <td class="td-relat">5</td>
+                </tr>
+                <tr>
+                    <td class="td-relat">Fernanda</td>
+                    <td class="td-relat">7</td>
+                    <td class="td-relat">4</td>
+                    <td class="td-relat">4</td>
+                </tr>
+            </tbody>
+        </table>                
+    </section>
+</div>
+    
+    <!-- Adicionando um espaço aqui -->
+    <div style="margin: 20px 0;"></div> <!-- Espaço entre as seções -->
+
+    <div class="grafico-section">
+        <section class="relatorio-section">
+            <h2 class="grafic">Gráfico dos membros</h2>
+            <div class="grafico">
+                <canvas id="graficoParticipacaoMembros"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Clube de Livros Online - Todos os direitos reservados.</p>
+    </footer>
+
+     <script src="./javascript/relatorio.js"></script>
+</body>
+</html>

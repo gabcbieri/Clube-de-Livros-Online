@@ -259,7 +259,7 @@ section#best-books {
 }
 
 .container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
     gap: 10px; /* Espaço entre os itens */
     padding: 20px;
